@@ -15,7 +15,7 @@ public static String[] fizzBuzz(int start, int end) {
         String[] fb = IntStream.range(start, end)
                             .boxed()
                             .map(i -> {
-                                if (i % (3 * 5) == 0) {
+                                if (i % 3 == 0 && i % 5 == 0) {
                                     return "FizzBuzz";
                                 } else if (i % 3 == 0) {
                                     return "Fizz";
@@ -28,4 +28,4 @@ public static String[] fizzBuzz(int start, int end) {
                             .toArray(String[]::new);
                   
         return fb;
-    }
+}
