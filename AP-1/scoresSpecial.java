@@ -8,6 +8,17 @@ scoresSpecial([12, 10, 4], [2, 20, 30]) → 40
 scoresSpecial([20, 10, 4], [2, 20, 10]) → 40
 scoresSpecial([12, 11, 4], [2, 20, 31]) → 20*/
 
+//Solution with a method.
+
+public int scoresSpecial(int[] a, int[] b) {
+return biggest(a) + biggest(b);
+}
+
+private int biggest(int[] arr) {
+return Arrays.stream(arr).filter(i -> i % 10 == 0).max().orElse(0);
+}
+
+//Or straight without a method
 
 public int scoresSpecial(int[] a, int[] b) {
       int firstArr = Arrays.stream(a).filter(i -> i % 10 == 0).max().orElse(0);
