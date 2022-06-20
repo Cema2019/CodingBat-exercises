@@ -6,5 +6,5 @@ equalIsNot("This is notnot") → true
 equalIsNot("noisxxnotyynotxisi") → true*/
 
 public boolean equalIsNot(String str) {
-  return str.split("is", - 1).length - 1 == str.split("not", - 1).length - 1;
+  return str.split("is", - 1).length == str.split("not", - 1).length;
 }
